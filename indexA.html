@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <style>
+    .highlight {
+        background: rgb(237, 11, 131);
+        padding: 10px;
+    }
+            </style>
+<body>
+    <h1>JS Store Removed Element</h1>
+    <div id="parent">
+        <p>The removeChild() function can be used to remove a child element.</p>
+        <p id="child">This element will be removed.</p>
+    </div>
+
+    <script>
+        
+        var parentElement = document.getElementById('parent');
+        var childElement = document.getElementById('child');
+        var removedElement = parentElement.removeChild(childElement);
+
+        document.write('Element with id equal "' + removedElement.id + '" is removed.');
+    </script>
+
+    <h1>JS Replace Element</h1>
+    <div id="parent">
+        <p>The replaceElement() function can be used to replace a child element.</p>
+        <p id="child">This element will be replaced.</p>
+    </div>
+
+    <script>
+      
+        var parent = document.getElementById('parent');
+        var oldChild = document.getElementById('child');
+        var newChild = document.createElement('p');
+        var newChildText = document.createTextNode('Replaced by Javascript.');
+        
+        
+        newChild.appendChild(newChildText);
+        parent.replaceChild(newChild, oldChild);
+    </script>
+
+    <h1>JS Add CSS Class</h1>
+    <p>You can use the "classList.add()" method to add a css class to the element.</p>
+    <p id="demo">I am using the highlight class.</p>
+
+    <script>
+        // element في متغير إسمه demo يساوي id هنا قمنا بتخزين العنصر الذي يملك
+        var element = document.getElementById('demo');
+
+        // element للعنصر الذي يمثله المتغير highlight هنا قمنا بإضافة الكلاس
+        element.classList.add('highlight');
+    </script> -->
+
+    <h1>Javascript Async Await Keywords</h1>
+    <p>Click on the button and wait for 1 second to execute the promise.</p>
+    <button onclick="executePromise()">Execute the promise</button>
+    <p id="demo"></p>
+   
+    <script>
+		async function fetchData() {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					const value = Math.floor(Math.random() * 10) + 1;
+					resolve(value);
+				}, 1000);
+			});
+		}
+
+		async function executePromise() {
+		async function fetchData() {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					const value = Math.floor(Math.random() * 10) + 1;
+					resolve(value);
+				}, 1000);
+			});
+		}
+		async function executePromise() {
+			let data = await fetchData();
+			document.querySelector('#demo').innerHTML = 'Result = ' + data;
+		}
+	</script>
+			let data = await fetchData();
+			document.querySelector('#demo').innerHTML = 'Result = ' + data;
+		}
+	</script>
+    
+</body>
+</html>
